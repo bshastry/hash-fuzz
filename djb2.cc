@@ -36,7 +36,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t len)
 	{
 		if (s_HashMap[h] != ipaddress)
 		{
-			ofstream f("collisions.txt", ios::app);
+			ofstream f("djb2-collisions.txt", ios::app);
 			f << "Hash: " << h << endl;
 			f << "Input 1: " << s_HashMap[h] << endl;
 			f << "Input 2: " << ipaddress << endl;

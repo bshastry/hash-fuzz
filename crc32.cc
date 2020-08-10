@@ -26,7 +26,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
 	{
 		if (hashMap[cs] != i)
 		{
-			ofstream of("collision.txt", ios::app);
+			ofstream of("crc-collision.txt", ios::app);
 			of << "Hash: " << cs << endl;
 			of << "i1: " << i << endl;
 			of << "i2: " << hashMap[cs] << endl;
